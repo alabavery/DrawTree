@@ -17,8 +17,8 @@ def plot_placement_vectors(ax, start, vector, rotation):
 			
 			for alpha in np.arange(1,0,-0.2):
 				final_line, = plot_vector(ax, start, vector, alpha = alpha, color = 'g', linestyle = '--', linewidth = 5)
-				preliminary_dot, = ax.plot([start[0] + vector.flat[0]], [start[1] + vector.flat[1]], 'ro')
-				plt.pause(0.05)
+				preliminary_dot, = ax.plot([start[0] + vector.flat[0]], [start[1] + vector.flat[1]], 'bo')
+				plt.pause(0.005)
 				final_line.remove()
 				preliminary_dot.remove()
 			break
