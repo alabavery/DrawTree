@@ -11,7 +11,7 @@ BRANCH_LENGTH = 4
 
 def create_nuclear_family(possiblities, parent = None):
 
-	minimum_branch = Minimum_Branch(BRANCH_LENGTH, parent)
+	minimum_branch = Minimum_Branch(ax, BRANCH_LENGTH, parent)
 	if parent:
 		ranger = 2 * minimum_branch.isoceles_angle
 		sibling_increment = ranger / (len(possiblities) - 1)
