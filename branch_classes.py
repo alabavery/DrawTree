@@ -40,15 +40,15 @@ class Branch():
 		else:
 			self.fontsize = 15
 
-		self.axes.plot([self.start[0], self.end[0]], [self.start[1], self.end[1]], color = 'r')
-		self.axes.plot([self.end[0]],[self.end[1]], 'ro')
+		self.axes.plot([self.start[0], self.end[0]], [self.start[1], self.end[1]], color = 'r', linewidth = 2)
+		self.axes.plot([self.end[0]],[self.end[1]], 'bo')
 		plt.pause(0.1)
 
 
 
 	def label_branch(self):
 		self.axes.text(self.end[0], self.end[1] - 0.25, self.name, fontsize = self.fontsize, color = 'white', 
-			bbox={'facecolor':'blue', 'alpha':0.8, 'pad':2})
+			bbox={'facecolor':'blue', 'alpha':0.8, 'pad':4})
 
 
 
