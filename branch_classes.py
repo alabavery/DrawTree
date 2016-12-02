@@ -54,7 +54,7 @@ class Branch():
 
 class Minimum_Branch():
 
-	def __init__(self, branch_length, parent = None):
+	def __init__(self, axes, branch_length, parent = None):
 
 		if parent:
 			self.angle_to_parent = (math.pi * 2 - parent.sibling_increment) / 2
@@ -62,6 +62,8 @@ class Minimum_Branch():
 			placement_vect_len = math.cos(self.isoceles_angle) * branch_length * 2
 			scale_factor = placement_vect_len / vector_length(parent.branch_vector)
 			self.placement_vector = rotate_vector(parent.branch_vector * scale_factor, -self.isoceles_angle)
+
+			plot_placement_vectors(axes, parent.start, parent.branch_vector * scale_factor,  -self.isoceles_angle)
 
 		else:
 			self.placement_vector = np.matrix( [[branch_length], [0]] )
